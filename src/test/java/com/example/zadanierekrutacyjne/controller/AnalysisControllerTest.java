@@ -15,8 +15,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class AnalysisControllerTest {
 
     @Autowired
-    AnalysisService analysisService;
-    @Autowired
     MockMvc mvc;
 
     @Test
