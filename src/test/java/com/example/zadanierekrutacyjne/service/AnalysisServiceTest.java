@@ -9,7 +9,6 @@ import java.util.Map;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AnalysisServiceTest {
-
     @Test
     void shouldReturnTrueIfListHasSameObject() {
         AnalysisService analysisService = new AnalysisService();
@@ -46,7 +45,7 @@ class AnalysisServiceTest {
     @Test
     void shouldReturnListOfStringsInLowerCaseWithoutSpecialCharactersAndWhiteSpaces() {
         AnalysisService analysisService = new AnalysisService();
-        String text = "- ; - - ;;;; .... .. Test .... ,,,, ,,  ,,, test TEST";
+        String text = "- ; - - ;;;; .... .. Test .... ,,,, ,,  ,,, test\nTEST \n \r";
         List<String> test = List.of("test", "test", "test");
         analysisService.getListOfStringsFromText(text);
         assertEquals(test, analysisService.getListOfStringsFromText(text));

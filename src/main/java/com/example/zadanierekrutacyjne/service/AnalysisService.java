@@ -50,7 +50,7 @@ public class AnalysisService {
 
     public List<String> getListOfStringsFromText(String text) {
         return Arrays.stream(text.toLowerCase()
-                .replaceAll("[-+,+.+(+)+–+;+:+!+?+'+^+@+#+$+%+&+*+|+>+<]", " ")
+                .replaceAll("[-+,+.+(+)+–+;+:+!+?+'+^+@+#+$+%+&+*+|+>+<+\n+”+„+\r]", " ")
                 .split(" ")).filter(string -> !string.equals("")).toList();
     }
 
